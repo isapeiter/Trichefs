@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>File to Spreadsheet Converter</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+
+
+<!-- Material Symbols (mantive pois não é parte do Tailwind) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+
+<link rel="stylesheet" href="./../css/Covert.css" />
+</head>
+<body class="page-root">
+<div class="container">
+<header class="page-header">
+<h1>File to Spreadsheet Converter</h1>
+<p class="subtitle">Convert your photo, video, and audio files into XML and JSON spreadsheets.</p>
+</header>
+
+
+<main>
+<!-- Upload / Dropzone -->
+<section class="card upload-card">
+<div id="dropzone" class="dropzone">
+<span class="material-symbols-outlined upload-icon">cloud_upload</span>
+<div class="drop-text">
+<p class="drop-title">Drag &amp; Drop Your Files Here</p>
+<p class="drop-sub">Supports PHOTO, VIDEO, AUDIO files</p>
+</div>
+<input id="fileInput" type="file" multiple accept="image/*,video/*,audio/*" />
+<button id="browseBtn" class="btn btn-ghost">Or Browse Files</button>
+</div>
+
+
+<div id="fileList" class="file-list" aria-live="polite"></div>
+</section>
+
+
+<!-- Configuration / Action -->
+<section class="card config-card">
+<h3>Choose Output Format</h3>
+<div class="format-row">
+<label class="format-option">
+<input type="radio" name="format" value="xml" checked />
+<span>XML</span>
+</label>
+<label class="format-option">
+<input type="radio" name="format" value="json" />
+<span>JSON</span>
+</label>
+</div>
+
+
+<button id="convertBtn" class="btn btn-primary" disabled>Convert Files</button>
+</section>
+
+
+<!-- Progress / Results -->
+<section class="card result-card">
+<div id="progressArea" class="progress-area hidden">
+<h3>Conversion in Progress...</h3>
+<div id="progressList" class="progress-list"></div>
+</div>
+
+
+<div id="completedArea" class="completed-area hidden">
+<div class="completed-header">
+<h3>Conversion Complete!</h3>
+<button id="downloadAllBtn" class="btn btn-ghost">Download All (.zip)</button>
+</div>
+<div id="resultsList" class="results-list"></div>
+</div>
+</section>
+</main>
+
+
+<footer class="page-footer">Made with ❤ — Demo (files are converted to simple text blobs for example)</footer>
+</div>
+
+
+<script src="./../js/Convert.js"></script>
+</body>
+</html>
