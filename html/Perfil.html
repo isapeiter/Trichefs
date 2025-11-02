@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Histórico de Conversões</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="./../css/Perfil.css" />
+</head>
+<body>
+  <aside>
+    <div>
+      <h1>ConverterApp</h1>
+      <nav class="menu">
+        <a href="#"><span class="material-symbols-outlined">grid_view</span>Dashboard</a>
+        <a href="#"><span class="material-symbols-outlined">change_circle</span>Nova Conversão</a>
+        <a href="#" class="active"><span class="material-symbols-outlined">person</span>Meu Perfil</a>
+      </nav>
+    </div>
+    <div class="bottom-menu">
+      <a href="#"><span class="material-symbols-outlined">settings</span>Configurações</a>
+      <a href="#"><span class="material-symbols-outlined">logout</span>Sair</a>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h2>Meu Perfil</h2>
+        <p>Gerencie sua conta e veja o histórico de conversões.</p>
+      </div>
+      <div class="profile-info">
+        <div>
+          <strong>Ana Sousa</strong><br>
+          <small>ana.sousa@email.com</small>
+        </div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRSi2ANwmg0Nehzkb6a43MfSHF0WWT3SwpUQ0q08BDFcsHpdhAYmG3OwNYAYOFLJtUsQ-e-D9PcQdWJEdIu8LcpdXmF9EAVbYMJBjqCAmGIRYmxNTK74yP5N3QPciYIzB2TLRTHvJoKBB_jJSvNCV_Me6QWtm87bPc5JzwwNQbNycnLCoD81lp-bTHtEsDHbDOqVhoP3EfG13QvPLGVNsFFwD2-3s8Vlly5p3k7KIDMB4FU95DRW05wbTV9zpkGIFbDpMznhsrIa0L" alt="Foto do usuário">
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="card">
+        <h3>35</h3>
+        <p>Total de Conversões</p>
+      </div>
+      <div class="card">
+        <h3>1.2 GB</h3>
+        <p>Arquivos Processados</p>
+      </div>
+      <div class="card">
+        <h3>Out 2023</h3>
+        <p>Membro desde</p>
+      </div>
+    </section>
+
+    <h3 class="section-title">Histórico de Conversões</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome do Arquivo</th>
+          <th>Tipo de Conversão</th>
+          <th>Data</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>vacation_highlights.mp4</td>
+          <td>Vídeo para JSON</td>
+          <td>25/10/2023</td>
+          <td><span class="status completed">Concluído</span></td>
+          <td><button>Baixar</button></td>
+        </tr>
+        <tr>
+          <td>meeting_notes.wav</td>
+          <td>Áudio para XML</td>
+          <td>24/10/2023</td>
+          <td><span class="status completed">Concluído</span></td>
+          <td><button>Baixar</button></td>
+        </tr>
+        <tr>
+          <td>project_alpha_images.zip</td>
+          <td>Foto para JSON</td>
+          <td>22/10/2023</td>
+          <td><span class="status completed">Concluído</span></td>
+          <td><button>Baixar</button></td>
+        </tr>
+        <tr>
+          <td>family-photo-2023.jpg</td>
+          <td>Foto para XML</td>
+          <td>20/10/2023</td>
+          <td><span class="status failed">Falhou</span></td>
+          <td><button>Tentar Novamente</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <span>Mostrando 1 a 4 de 35 resultados</span>
+      <div class="pagination-buttons">
+        <button>1</button>
+        <button class="active">2</button>
+        <button>3</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./../js/Perfil.js"></script>
+</body>
+</html>
