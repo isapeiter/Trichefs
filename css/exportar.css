@@ -1,0 +1,465 @@
+.tela-exportar {
+  display: flex;
+  flex-direction: column;
+  height: 1103px;
+  align-items: flex-start;
+  position: relative;
+  background-color: #fffcf9;
+}
+
+.tela-exportar .depth-frame {
+  display: flex;
+  flex-direction: column;
+  height: 1103px;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  background-color: #f7fafc;
+}
+
+.tela-exportar .div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-2 {
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  flex: 0 0 auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: #f7fafc;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.tela-exportar .depth-frame-3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .div-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .vector-wrapper {
+  position: relative;
+  flex: 1;
+  width: 16px;
+  flex-grow: 1;
+}
+
+.tela-exportar .vector {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
+}
+
+.tela-exportar .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #0c141c;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+
+.tela-exportar .depth-frame-4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 32px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.tela-exportar .depth-frame-5 {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  gap: 36px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #0c141c;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+.tela-exportar .depth-frame-wrapper {
+  display: inline-flex;
+  max-width: 480px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0px 10px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.tela-exportar .img-wrapper {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.tela-exportar .img {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 15px;
+  height: 16px;
+}
+
+.tela-exportar .logo {
+  position: relative;
+  width: 38px;
+  height: 38px;
+}
+
+.tela-exportar .group {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #2f4157;
+  border-radius: 92px;
+}
+
+.tela-exportar .watermark-image {
+  margin-top: 5px;
+  width: 28px;
+  height: 28px;
+  margin-left: 13.16%;
+  margin-right: 13.16%;
+  flex: 1;
+  aspect-ratio: 1;
+}
+
+.tela-exportar .depth-frame-7 {
+  height: 960px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 160px 47px;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.tela-exportar .depth-frame-8 {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  width: 960px;
+  align-items: flex-start;
+  padding: 20px 0px;
+  position: relative;
+  margin-bottom: -100.00px;
+}
+
+.tela-exportar .depth-frame-9 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 12px 12px;
+  padding: 16px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-10 {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.tela-exportar .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #0c141c;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+
+.tela-exportar .depth-frame-11 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 16px 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-12 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px 12px;
+  padding: 16px;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-13 {
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #577c8e;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.tela-exportar .text-wrapper-4 {
+  position: relative;
+  width: fit-content;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #f7fafc;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 21px;
+  white-space: nowrap;
+}
+
+.tela-exportar .depth-frame-14 {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 480px;
+  align-items: flex-end;
+  gap: 16px 16px;
+  padding: 12px 16px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-15 {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  align-items: flex-start;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.tela-exportar .depth-frame-16 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 8px;
+  flex: 0 0 auto;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.tela-exportar .text-wrapper-5 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #0c141c;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.tela-exportar .depth-frame-17 {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 32px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+}
+
+.tela-exportar .vector-2 {
+  position: absolute;
+  top: -391px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .depth-frame-18 {
+  height: 32px;
+  background-color: #f7fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: #dfdfdf;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+}
+
+.tela-exportar .vector-3 {
+  position: absolute;
+  top: -479px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .text-wrapper-6 {
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 254px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #aaaaaa;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.tela-exportar .vector-4 {
+  position: absolute;
+  top: -567px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .vector-5 {
+  position: absolute;
+  top: -726px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .vector-6 {
+  position: absolute;
+  top: -838px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .vector-7 {
+  position: absolute;
+  top: -950px;
+  left: -1519px;
+  width: 448px;
+  height: 32px;
+}
+
+.tela-exportar .depth-frame-19 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  align-self: stretch;
+  width: 100%;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .depth-frame-20 {
+  display: flex;
+  max-width: 480px;
+  width: 84px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  position: relative;
+  background-color: #577c8e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tela-exportar .depth-frame-21 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.tela-exportar .text-wrapper-7 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #f7fafc;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 21px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
