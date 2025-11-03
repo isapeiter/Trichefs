@@ -1,0 +1,75 @@
+/* Fundo com gradiente animado e brilho */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #5f2eea, #7c4dff, #a370f7, #9b59b6);
+  background-size: 400% 400%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow: hidden;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Div de brilho suave sobre o fundo */
+.brilho {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.35) 0%, transparent 70%);
+  filter: blur(60px);
+  animation: moverBrilho 5s ease-in-out infinite alternate;
+}
+
+/* Container principal */
+.tela-inicial {
+  text-align: center;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Logo com efeito de entrada e leve "pulse" */
+.logo {
+  width: 200px;
+  height: auto;
+  animation: fadeInUp 1.5s ease, pulse 2s infinite alternate;
+}
+
+/* Título com efeito suave */
+.titulo {
+  font-size: 28px;
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+  animation: fadeInUp 2s ease;
+}
+
+/* 🔁 Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes moverBrilho {
+  from { transform: translate(-80px, -50px); }
+  to { transform: translate(80px, 50px); }
+}

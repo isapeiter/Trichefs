@@ -1,182 +1,66 @@
-.tela-sgnup {
-  background-color: #ffffff;
-  width: 100%;
-  min-width: 1280px;
-  min-height: 1000px;
-  position: relative;
-}
-
-.tela-sgnup .rectangle {
-  position: absolute;
-  top: 157px;
-  left: 328px;
-  width: 616px;
-  height: 696px;
-  border-radius: 19px;
-  box-shadow: 0px 4px 4px #00000040;
-  background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    ),
-    linear-gradient(0deg, rgba(213, 206, 219, 1) 0%, rgba(213, 206, 219, 1) 100%);
-}
-
-.tela-sgnup .div, 
-.tela-sgnup .rectangle-2, 
-.tela-sgnup .rectangle-3, 
-.tela-sgnup .rectangle-5 {
-  position: absolute;
-  background-color: #e8edf5;
-  border-radius: 8px;
-}
-
-.tela-sgnup .div { top: 550px; left: 362px; width: 515px; height: 51px; }
-.tela-sgnup .rectangle-2 { top: 646px; left: 362px; width: 515px; height: 51px; }
-.tela-sgnup .rectangle-3 { top: 454px; left: 362px; width: 515px; height: 51px; }
-.tela-sgnup .rectangle-5 { top: 358px; left: 362px; width: 515px; height: 51px; }
-
-.tela-sgnup .ellipse, .tela-sgnup .ellipse-2, .tela-sgnup .ellipse-3, 
-.tela-sgnup .ellipse-4, .tela-sgnup .ellipse-5, .tela-sgnup .ellipse-6, 
-.tela-sgnup .ellipse-7, .tela-sgnup .ellipse-8, .tela-sgnup .ellipse-9, 
-.tela-sgnup .ellipse-10, .tela-sgnup .ellipse-11, .tela-sgnup .ellipse-12, 
-.tela-sgnup .ellipse-13, .tela-sgnup .ellipse-14, .tela-sgnup .ellipse-15, 
-.tela-sgnup .ellipse-16, .tela-sgnup .ellipse-17, .tela-sgnup .ellipse-18, 
-.tela-sgnup .ellipse-19, .tela-sgnup .ellipse-20, .tela-sgnup .ellipse-21, 
-.tela-sgnup .ellipse-22, .tela-sgnup .ellipse-23, .tela-sgnup .ellipse-24, 
-.tela-sgnup .ellipse-25, .tela-sgnup .ellipse-26, .tela-sgnup .ellipse-27, 
-.tela-sgnup .ellipse-28, .tela-sgnup .ellipse-29 {
-  width: 7px;
-  height: 7px;
-  background-color: #d9d9d9;
-  border-radius: 3.5px;
-  position: absolute;
-}
-
-.tela-sgnup .ellipse-29 {
-  top: 714px;
-  left: 366px;
-  width: 22px;
-  height: 21px;
-  border-radius: 11px / 10.5px;
-  border: 1px solid #5794ab;
-}
-
-/* Texto */
-.tela-sgnup .text-wrapper, .tela-sgnup .text-wrapper-2, .tela-sgnup .text-wrapper-3, 
-.tela-sgnup .text-wrapper-4, .tela-sgnup .text-wrapper-8, .tela-sgnup .text-wrapper-9, 
-.tela-sgnup .text-wrapper-10, .tela-sgnup .text-wrapper-11, .tela-sgnup .text-wrapper-12 {
-  font-family: "Inter-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 13px;
-  text-align: center;
-  line-height: 23px;
-  white-space: nowrap;
-  position: absolute;
-}
-
-.tela-sgnup .text-wrapper-8 {
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  font-size: 24px;
-  width: 323px;
-}
-
-.tela-sgnup .text-wrapper-3,
-.tela-sgnup .text-wrapper-11 {
-  font-family: "Inter-ExtraLight", Helvetica;
-  font-weight: 200;
-}
-
-/* Botão */
-.tela-sgnup .rectangle-4 {
-  position: absolute;
-  top: 770px;
-  left: 556px;
-  width: 168px;
-  height: 35px;
-  background-color: #577c8e;
-  border-radius: 8px;
-}
-
-.tela-sgnup .text-wrapper-10 {
-  top: 776px;
-  left: 606px;
-  color: #f7fafc;
-}
-
-/* Informativos e links */
-.tela-sgnup .eu-aceito-todos-os,
-.tela-sgnup .j-tem-uma-conta-fa-a {
-  color: transparent;
-  position: absolute;
-}
-
-.tela-sgnup .eu-aceito-todos-os { top: 713px; left: 392px; }
-.tela-sgnup .j-tem-uma-conta-fa-a { top: 809px; left: 735px; }
-
-.tela-sgnup .text-wrapper-5 { color: #0d141c; }
-.tela-sgnup .text-wrapper-6 { color: #577c8e; }
-.tela-sgnup .text-wrapper-7 { color: #d88888; }
-
-/* Retângulos decorativos */
-.tela-sgnup .rectangle-6 { position: absolute; top: 195px; left: 598px; width: 83px; height: 65px; background-color: #5794ab; border-radius: 7px; }
-.tela-sgnup .rectangle-7 { position: absolute; top: 207px; left: 608px; width: 30px; height: 5px; background-color: #9aafb2; }
-.tela-sgnup .rectangle-8 { position: absolute; top: 222px; left: 608px; width: 49px; height: 5px; background-color: #9cb3b7; }
-
-/* Parágrafo */
-.tela-sgnup .p {
-  position: absolute;
-  top: 298px;
-  left: 385px;
-  width: 510px;
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 13px;
-  text-align: center;
-  line-height: 23px;
-  white-space: nowrap;
-}
-
-/* Depth frame e logo */
-.tela-sgnup .depth-frame {
+/* cadastro.css — simples e responsivo, compatível com seu HTML */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f3f6fb;
+  min-height: 100vh;
   display: flex;
-  width: 1280px;
-  height: 98px;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 40px;
-  position: absolute;
-  top: -1px;
-  left: 0;
-  border-bottom: 1px solid #e5e8ea;
+  justify-content: center;
+  padding: 40px;
 }
 
-.tela-sgnup .logo {
-  position: absolute;
-  top: 9px;
-  left: 1172px;
-  width: 78px;
-  height: 79px;
+/* container */
+.container {
+  width: 920px;
+  max-width: 95%;
   display: flex;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.tela-sgnup .group {
+/* lado da imagem */
+.img-side {
   flex: 1;
-  width: 78px;
+  background: linear-gradient(180deg,#577c8e,#83a6b6);
   display: flex;
-  background-color: #2f4157;
-  border-radius: 92px;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
 }
+.img-side img { width: 220px; height: auto; }
 
-.tela-sgnup .watermark-image {
-  margin-top: 5px;
-  width: 57.47px;
-  height: 57.47px;
-  margin-left: 13.16%;
-  margin-right: 13.16%;
+/* lado do form */
+.form-side {
   flex: 1;
-  aspect-ratio: 1;
+  padding: 40px 50px;
+}
+.form-side h1 { margin-bottom: 24px; font-size: 28px; color: #222; }
+.form-side form { display: flex; flex-direction: column; gap: 12px; }
+.form-side input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e0e6ef;
+  font-size: 14px;
+}
+.form-side button {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #577c8e;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.form-side p { margin-top: 16px; font-size: 13px; color: #555; }
+.form-side a { color: #577c8e; text-decoration: none; font-weight: 600; }
+
+/* responsivo */
+@media (max-width: 760px) {
+  .container { flex-direction: column; }
+  .img-side, .form-side { width: 100%; padding: 24px; }
+  .img-side img { width: 180px; }
 }
