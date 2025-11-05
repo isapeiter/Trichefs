@@ -1,22 +1,34 @@
 // =================== HEADER DINÂMICO ===================
 async function loadHeader() {
   const headerContainer = document.createElement("div");
-  document.body.prepend(headerContainer); // coloca no topo da página
+  document.body.prepend(headerContainer); // coloca o header no topo da página
 
-  const response = await fetch("../html/header.html"); // ajuste o caminho se necessário
-  const headerHTML = await response.text();
+  try {
+    // Ajuste o caminho conforme sua estrutura de pastas
+    const response = await fetch("./../html/header.html");
+    if (!response.ok) throw new Error("Erro ao carregar o header");
 
-  headerContainer.innerHTML = headerHTML;
+    const headerHTML = await response.text();
+    headerContainer.innerHTML = headerHTML;
 
-  // setup dos botões do header
-  const headerButtons = document.querySelectorAll(".header-btn");
-  headerButtons.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const page = btn.dataset.page;
-      window.location.href = page;
+    // Aguarda o header ser carregado antes de buscar os botões
+    const headerButtons = headerContainer.querySelectorAll(".header-btn");
+
+    headerButtons.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Pega o caminho da página a partir do data-page
+        const page = btn.dataset.page;
+
+        // Se for um caminho relativo, ajusta o diretório base
+        window.location.href = `./${page}`;
+      });
     });
-  });
+
+  } catch (error) {
+    console.error("Erro ao carregar o header:", error);
+  }
 }
 
 // Carrega o header em todas as páginas
