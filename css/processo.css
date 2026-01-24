@@ -13,7 +13,7 @@
   align-items: flex-start;
   position: relative;
   align-self: stretch;
-  width: 100%;
+  min-width: 848px;
   background-color: #f7f9fc;
 }
 
@@ -349,7 +349,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 

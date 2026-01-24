@@ -1,6 +1,3 @@
-// Este JS é apenas visual (não funcional ainda).
-// Exemplo: você pode futuramente adicionar navegação entre telas.
-
 console.log("Página de perfil carregada com sucesso!");
 
 document.addEventListener("DOMContentLoaded", () => {

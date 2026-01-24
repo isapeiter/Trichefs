@@ -5,7 +5,7 @@ async function loadHeader() {
 
   try {
     // Ajuste o caminho conforme sua estrutura de pastas
-    const response = await fetch("./../html/header.html");
+    const response = await fetch("./../html/Header.html");
     if (!response.ok) throw new Error("Erro ao carregar o header");
 
     const headerHTML = await response.text();

@@ -23,6 +23,7 @@
 .nav-links {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 36px;
 }
 
@@ -42,7 +43,6 @@
   color: #49729b;
 }
 
-/* Ícone do Usuário - CORRIGIDO */
 .user-icon {
   display: flex;
   align-items: center;
