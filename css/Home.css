@@ -20,6 +20,52 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+.audio-image {
+  width: 80px;           
+  height: 80px;          
+  margin: 0 auto;        
+  display: flex;         
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-image img {
+  width: 60%;           
+  height: auto;          
+}
+
+.img-image {
+  width: 80px;           
+  height: 80px;          
+  margin: 0 auto;        
+  display: flex;         
+  justify-content: center;
+  align-items: center;
+}
+
+.img-image img {
+  width: 60%;           
+  height: auto;          
+}
+
+.documento-image {
+  width: 80px;           
+  height: 80px;          
+  margin: 0 auto;        
+  display: flex;         
+  justify-content: center;
+  align-items: center;
+}
+
+.documento-image img {
+  width: 60%;           
+  height: auto;          
+}
+
+.file-types .card p {
+  color: #4A739C;   
+}
+
 .logo {
   font-weight: 600;
   font-size: 1.1rem;
@@ -47,11 +93,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #e2e8f0;
+  background: #C7D9E5;
   border-radius: 12px;
   margin: 2rem auto;
   padding: 3rem;
-  max-width: 1000px;
+  max-width: 81vw;
 }
 
 .hero-content {
@@ -70,7 +116,7 @@ body {
 }
 
 .upload-btn {
-  background-color: #2563eb;
+  background-color: #577C8E;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -79,7 +125,7 @@ body {
 }
 
 .upload-btn:hover {
-  background-color: #1e40af;
+  background-color: #577C8E;
 }
 
 .hero-image img {
@@ -110,10 +156,10 @@ body {
 }
 
 .card {
-  background-color: #e5e7eb;
+  background-color: #C7D9E5;
   border-radius: 8px;
   padding: 1.5rem;
-  width: 220px;
+  width: 26vw;   
   text-align: center;
   cursor: pointer;
   transition: 0.3s;
@@ -138,7 +184,7 @@ body {
 }
 
 .plan {
-  background-color: white;
+  background-color: #C7D9E5;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   width: 250px;
@@ -149,14 +195,14 @@ body {
 }
 
 .plan.selected {
-  border-color: #2563eb;
+  border-color: #577C8E;
 }
 
 .plan .badge {
   position: absolute;
   top: -12px;
   right: 15px;
-  background-color: #2563eb;
+  background-color: #577C8E;
   color: white;
   padding: 0.2rem 0.5rem;
   font-size: 0.75rem;
@@ -175,7 +221,7 @@ body {
 
 .plan button {
   margin-top: 1rem;
-  background-color: #2563eb;
+  background-color: #577C8E;
   color: white;
   border: none;
   padding: 0.6rem 1rem;
@@ -184,7 +230,7 @@ body {
 }
 
 .plan button:hover {
-  background-color: #1e40af;
+  background-color: #577C8E;
 }
 
 .plan .selected-btn {
@@ -202,3 +248,4 @@ body {
 .plan ul li {
   margin-bottom: 0.5rem;
 }
+
