@@ -20,6 +20,10 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+.h1{
+  background-color: #ffffff;
+}
+
 .audio-image {
   width: 80px;           
   height: 80px;          
@@ -98,6 +102,7 @@ body {
   margin: 2rem auto;
   padding: 3rem;
   max-width: 81vw;
+  height: 70vh;
 }
 
 .hero-content {
@@ -233,11 +238,19 @@ body {
   background-color: #577C8E;
 }
 
-.plan .selected-btn {
-  background-color: #d1d5db;
-  color: #374151;
-  cursor: not-allowed;
+.plans-container .plan button,
+.plans-container .plan .selected-btn {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  height: 5vh;
+  margin: 0 auto 30px auto;
 }
+
+
 
 .plan ul {
   list-style: none;
@@ -247,5 +260,17 @@ body {
 
 .plan ul li {
   margin-bottom: 0.5rem;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.plans-container .plan {
+  flex: 1;
+  max-width: 39vw; 
+  height: 40vh;
 }
 
