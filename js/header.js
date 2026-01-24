@@ -26,6 +26,21 @@ async function loadHeader() {
       });
     });
 
+    // =================== NAVEGAÇÃO PARA PERFIL ===================
+    const userIconButton = headerContainer.querySelector(".user-icon button");
+    
+    if (userIconButton) {
+      userIconButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        // Redireciona para a página de perfil
+        window.location.href = "./Perfil.html";
+      });
+
+      // Adiciona cursor pointer para indicar que é clicável
+      userIconButton.style.cursor = "pointer";
+    }
+
   } catch (error) {
     console.error("Erro ao carregar o header:", error);
   }
