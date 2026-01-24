@@ -20,7 +20,7 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.h1{
+.h1 {
   background-color: #ffffff;
 }
 
@@ -92,7 +92,7 @@ body {
   padding: 0.5rem;
 }
 
-/* Hero section */
+/* Hero section - AJUSTADO */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -101,8 +101,10 @@ body {
   border-radius: 12px;
   margin: 2rem auto;
   padding: 3rem;
-  max-width: 81vw;
-  height: 70vh;
+  max-width: 1200px; /* Mudado de 81vw para valor fixo */
+  width: 90%; /* Mantém responsivo mas com limite */
+  min-height: 400px; /* Mudado de 70vh para valor fixo */
+  height: auto; /* Permite crescer se necessário */
 }
 
 .hero-content {
@@ -118,6 +120,7 @@ body {
 .hero-content p {
   color: #4b5563;
   margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .upload-btn {
@@ -127,20 +130,26 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
 }
 
 .upload-btn:hover {
-  background-color: #577C8E;
+  background-color: #3f5f6f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(87, 124, 142, 0.3);
 }
 
 .hero-image img {
-  width: 180px;
+  width: 350px;
 }
 
 /* Features */
 .features {
   text-align: center;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .features h2 {
@@ -158,27 +167,48 @@ body {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .card {
   background-color: #C7D9E5;
   border-radius: 8px;
   padding: 1.5rem;
-  width: 26vw;   
-  text-align: center;
+  width: 100%;
+  max-width: 320px; /* Mudado de 26vw para valor fixo */
+  text-align: left;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
+}
+
+.audio-image,
+.img-image,
+.documento-image {
+  width: 5vw;           
+  height: 5vh;          
+  margin-right: 400px; /* Mudado de "0 auto" para "0" */
+  display: flex;         
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
   background-color: #dbeafe;
   transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Plans */
+/* Plans - AJUSTADO */
 .plans {
   text-align: center;
-  padding-bottom: 3rem;
+  padding: 3rem 20px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.plans h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .plans-container {
@@ -186,21 +216,33 @@ body {
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .plan {
   background-color: #C7D9E5;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
-  width: 250px;
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px; /* Mudado de 39vw para valor fixo */
+  min-height: 350px; /* Mudado de 40vh para valor fixo */
+  padding: 2rem 1.5rem;
   text-align: left;
   position: relative;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .plan.selected {
   border-color: #577C8E;
+  box-shadow: 0 4px 16px rgba(87, 124, 142, 0.3);
 }
 
 .plan .badge {
@@ -209,68 +251,158 @@ body {
   right: 15px;
   background-color: #577C8E;
   color: white;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.7rem;
   font-size: 0.75rem;
+  font-weight: 600;
   border-radius: 6px;
+}
+
+.plan h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
 }
 
 .price {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
+  color: #111827;
+  margin: 1rem 0;
 }
 
 .price span {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.plan button {
-  margin-top: 1rem;
-  background-color: #577C8E;
-  color: white;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.plan button:hover {
-  background-color: #577C8E;
-}
-
-.plans-container .plan button,
-.plans-container .plan .selected-btn {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  padding: 12px 0;
   font-size: 1rem;
-  border-radius: 8px;
-  height: 5vh;
-  margin: 0 auto 30px auto;
+  color: #6b7280;
+  font-weight: 400;
 }
-
-
 
 .plan ul {
   list-style: none;
-  margin-top: 1rem;
+  margin: 1.5rem 0;
+  flex: 1;
   color: #4b5563;
 }
 
 .plan ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-.plans-container {
-  display: flex;
-  justify-content: center;
-  gap: 3vw;
+.plan ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #577C8E;
+  font-weight: bold;
 }
 
-.plans-container .plan {
-  flex: 1;
-  max-width: 39vw; 
-  height: 40vh;
+.plan button,
+.plan .selected-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: #577C8E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
+.plan button:hover,
+.plan .selected-btn:hover {
+  background-color: #3f5f6f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(87, 124, 142, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero {
+    max-width: 95%;
+    padding: 2rem;
+  }
+
+  .plans-container {
+    gap: 1.5rem;
+  }
+
+  .plan {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .file-types {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .upload-btn {
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

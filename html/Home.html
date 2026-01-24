@@ -1,94 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversor de Arquivos</title>
+  <title>Conversor de Arquivos - Home</title>
   <link rel="stylesheet" href="./../css/Home.css">
 </head>
 <body>
- 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Converta seus arquivos de forma rápida e segura</h1>
+      <p>Transforme áudios, vídeos e imagens em diferentes formatos com apenas alguns cliques. Rápido, seguro e fácil de usar.</p>
+      <button class="upload-btn">Começar Agora</button>
+    </div>
+    <div class="hero-image">
+      <img src="./../img/Logo para home.svg" alt="Ilustração de conversão">
+    </div>
+  </section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Converta arquivos sem esforço</h1>
-        <p>
-          Transforme seus arquivos em diferentes formatos com facilidade. 
-          Nossa ferramenta suporta uma ampla variedade de tipos de arquivo, 
-          incluindo áudio (MP3, WAV) e imagens (JPG, PNG).
-        </p>
-        <button class="upload-btn">Upload de Arquivos</button>
+  <!-- Features Section -->
+  <section class="features">
+    <h2>O que você pode converter?</h2>
+    <p>Suportamos diversos formatos de arquivo para suas necessidades</p>
+    
+    <div class="file-types">
+      <div class="card">
+        <div class="audio-image">
+          <img src="./../img/audio.png" alt="Ícone de áudio">
+        </div>
+        <h3>Áudio</h3>
+        <p>Converter arquivos de audio como MP3, WAV, e mais.</p>
       </div>
-      <div class="hero-image">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="File Icon">
+
+      <div class="card">
+        <div class="img-image">
+          <img src="./../img/img.png" alt="Ícone de imagem">
+        </div>
+        <h3>Imagem</h3>
+        <p>Transformar imagens JPG, PNG, entre outros.</p>
       </div>
-    </section>
 
-    <section class="features">
-      <h2>Características</h2>
-      <h3>Escolher tipo de arquivo</h3>
-      <p>Clique no tipo de arquivo que deseja transcrever</p>
-
-      <div class="file-types">
-        <div class="card" onclick="selectType('audio')">
-          <div class="audio-image">
-            <img src="./../audio.png" alt="">
-          </div>
-          <h4>Áudio</h4>
-          <p>Converter arquivos de áudio como MP3, WAV, e mais.</p>
+      <div class="card">
+        <div class="documento-image">
+          <img src="./../img/documento.png" alt="Ícone de documento">
         </div>
-
-        <div class="card" onclick="selectType('imagens')">
-          <div class="img-image">
-            <img src="./../img.png" alt="">
-          </div>
-          <h4>Imagens</h4>
-          <p>Transformar imagens JPG, PNG, entre outros.</p>
-        </div>
-
-        <div class="card" onclick="selectType('documentos')">
-          <div class="documento-image">
-            <img src="./../documento.png" alt="">
-          </div>
-          <h4>Documentos</h4>
-          <p>Converter documentos para planilhas JSON e XML.</p>
-        </div>
+        <h3>Documento</h3>
+        <p>Converter documentos para planilhas JSON e XML.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="plans">
-      <h2>Planos de assinatura</h2>
-
-      <div class="plans-container">
-        <div class="plan selected">
-          <h3>Free</h3>
-          <p class="price">$0 <span>/mensais</span></p>
-          <button class="selected-btn" disabled>Selecionado</button>
-          <ul>
-            <li>3–5 usos diários</li>
-            <li>Conversor de Arquivos Básicos</li>
-          </ul>
-        </div>
-
-        <div class="plan premium">
-          <div class="badge">Melhor Valor</div>
-          <h3>Premium</h3>
-          <p class="price">$9.99 <span>/mensais</span></p>
-          <button onclick="selectPlan('premium')">Selecionar</button>
-          <ul>
-            <li>100–120 usos diários</li>
-            <li>Conversor de Arquivos Avançado</li>
-            <li>Suporte prioritário</li>
-          </ul>
-        </div>
+  <!-- Plans Section -->
+  <section class="plans">
+    <h2>Escolha o plano ideal para você</h2>
+    <p>Planos flexíveis para todas as necessidades</p>
+    
+    <div class="plans-container">
+      <!-- Plano Gratuito -->
+      <div class="plan">
+        <h3>Gratuito</h3>
+        <div class="price">R$ 0<span>/mês</span></div>
+        <ul>
+          <li>3 conversões por dia</li>
+          <li>Arquivos até 10MB</li>
+        </ul>
+        <button>Começar Grátis</button>
       </div>
-    </section>
-  </main>
 
-  <script src="./../js/Home.js"></script>
-  <script type="module" src="../controller/mainController.js"></script>
+      <!-- Plano Premium -->
+      <div class="plan selected">
+        <span class="badge">Mais Popular</span>
+        <h3>Premium</h3>
+        <div class="price">R$ 9,90<span>/mês</span></div>
+        <ul>
+          <li>15 - 20 Conversões por dia</li>
+          <li>Arquivos até 100MB</li>
+        </ul>
+        <button>Assinar Premium</button>
+      </div>
+
+      <!-- Plano Empresarial -->
+      <div class="plan">
+        <h3>Empresarial</h3>
+        <div class="price">R$ 49,90<span>/mês</span></div>
+        <ul>
+          <li>60 - 70 Conversões</li>
+          <li>Arquivos até 1GB</li>
+        </ul>
+        <button>Falar com Vendas</button>
+      </div>
+    </div>
+  </section>
+
   <script type="module" src="./../js/header.js"></script>
-
+  <script src="./../js/Home.js"></script>
 </body>
 </html>
