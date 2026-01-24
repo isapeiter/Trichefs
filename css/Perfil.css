@@ -15,37 +15,6 @@
   overflow-x: hidden;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.logo {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.nav-links a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #1f2937;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  color: #2563eb;
-}
-
-.user-icon {
-  background-color: #e5e7eb;
-  border-radius: 50%;
-  padding: 0.5rem;
-}
 
 /* Header Superior - Padrão */
 .tela-perfil .depth-frame {
