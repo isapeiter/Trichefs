@@ -1,30 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
-  <link rel="stylesheet" href="../css/Global.css" />
-  <link rel="stylesheet" href="../css/Login.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Conversor de Arquivos</title>
+  <link rel="stylesheet" href="./../css/Login.css" />
 </head>
 <body>
-  <!-- adicionei a classe tela-login aqui para casar com seu CSS -->
-  <div class="container tela-login">
-    <div class="img-side">
-      <img src="./../img/Logo Org CSV.svg" alt="Logo">
+  <div class="auth-container">
+    <!-- Lado Esquerdo - Branding -->
+    <div class="auth-branding">
+      <div class="branding-content">
+        <div class="logo-container">
+          <div class="logo-circle">
+            <img src="./../img/Logo Org CSV.svg" alt="Logo" />
+          </div>
+          <h1>Conversor de Arquivos</h1>
+        </div>
+        <p class="branding-text">Converta seus arquivos de forma rápida, segura e fácil.</p>
+        <div class="features-list">
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>Conversões ilimitadas</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>100% seguro e privado</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <span>Suporte a múltiplos formatos</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="form-side">
-      <h1>Login</h1>
-      <form id="loginForm">
-        <input id="loginUser" type="text" placeholder="Usuário" required>
-        <input id="loginPass" type="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-      </form>
-      <p>Não tem uma conta? <a href="./../html/Cadastro.html">Cadastre-se</a></p>
+
+    <!-- Lado Direito - Formulário de Login -->
+    <div class="auth-form-container">
+      <div class="auth-form">
+        <div class="form-header">
+          <h2>Bem-vindo de volta!</h2>
+          <p>Entre com sua conta para continuar</p>
+        </div>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              placeholder="seu@email.com" 
+              required 
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password"
+              placeholder="••••••••" 
+              required 
+            />
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="remember" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Lembrar de mim</span>
+            </label>
+            <a href="#" class="forgot-link">Esqueceu a senha?</a>
+          </div>
+
+          <button type="submit" class="btn-primary">Entrar</button>
+
+          <div class="divider">
+            <span>ou continue com</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="btn-social" onclick="loginWithGoogle()">
+              <img src="https://www.google.com/favicon.ico" alt="Google" />
+              <span>Google</span>
+            </button>
+            <button type="button" class="btn-social" onclick="loginWithGithub()">
+              <span class="github-icon">⚙</span>
+              <span>GitHub</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="form-footer">
+          <p>Não tem uma conta? <a href="./Cadastro.html">Cadastre-se</a></p>
+        </div>
+      </div>
     </div>
   </div>
 
- <script type="module" src="../controller/mainController.js"></script>
-
+  <script src="./../js/Login.js"></script>
 </body>
 </html>

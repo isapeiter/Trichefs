@@ -3,55 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exportar - Conversor de Arquivos</title>
+  <title>Converter Arquivos - Conversor de Arquivos</title>
+  <link rel="stylesheet" href="./../css/globals.css" />
   <link rel="stylesheet" href="./../css/Covert.css" />
 </head>
 <body>
+  <div class="tela-converter">
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+      <div class="converter-container">
+        <div class="converter-header">
+          <h2>Converter Arquivo</h2>
+          <p>Faça upload e configure as opções de conversão do seu arquivo</p>
+        </div>
 
+        <!-- Área de Upload -->
+        <section class="upload-section">
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-icon">📁</div>
+            <h3>Arraste e solte seu arquivo aqui</h3>
+            <p>ou clique para selecionar</p>
+            <input type="file" id="fileInput" hidden />
+            <button class="btn-upload" onclick="document.getElementById('fileInput').click()">
+              Escolher Arquivo
+            </button>
+          </div>
+          
+          <!-- Preview do arquivo -->
+          <div class="file-preview" id="filePreview" style="display: none;">
+            <div class="file-info">
+              <div class="file-icon">📄</div>
+              <div class="file-details">
+                <h4 id="fileName">arquivo.mp3</h4>
+                <p id="fileSize">2.5 MB</p>
+              </div>
+              <button class="btn-remove" onclick="removeFile()">✕</button>
+            </div>
+          </div>
+        </section>
 
-  <main class="exportar-container">
-    <h1>Exportar</h1>
+        <!-- Configurações de Conversão -->
+        <section class="config-section">
+          <h3 class="section-title">Tipo de Saída</h3>
+          <div class="output-buttons">
+            <button class="output-btn active" data-format="json" onclick="selectOutput('JSON')">
+              <span class="format-icon">{ }</span>
+              <span>JSON</span>
+            </button>
+            <button class="output-btn" data-format="xml" onclick="selectOutput('XML')">
+              <span class="format-icon">&lt; &gt;</span>
+              <span>XML</span>
+            </button>
+            <button class="output-btn" data-format="csv" onclick="selectOutput('CSV')">
+              <span class="format-icon">📊</span>
+              <span>CSV</span>
+            </button>
+            <button class="output-btn" data-format="txt" onclick="selectOutput('TXT')">
+              <span class="format-icon">📝</span>
+              <span>TXT</span>
+            </button>
+          </div>
+        </section>
 
-    <section class="output-section">
-      <h2>Tipo de Output</h2>
-      <div class="output-buttons">
-        <button class="output-btn active" onclick="selectOutput('JSON')">JSON</button>
-        <button class="output-btn" onclick="selectOutput('XML')">XML</button>
+        <!-- Parâmetros de Transcrição -->
+        <section class="config-section">
+          <h3 class="section-title">Parâmetros de Transcrição</h3>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="linguagem">Linguagem</label>
+              <select id="linguagem">
+                <option value="pt-br">Português (Brasil)</option>
+                <option value="en">Inglês</option>
+                <option value="es">Espanhol</option>
+                <option value="fr">Francês</option>
+                <option value="de">Alemão</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="precisao">Precisão</label>
+              <select id="precisao">
+                <option value="alta">Alta (Mais lento)</option>
+                <option value="media" selected>Média (Recomendado)</option>
+                <option value="baixa">Baixa (Mais rápido)</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Preferências de Formatação -->
+        <section class="config-section">
+          <h3 class="section-title">Preferências de Formatação</h3>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="formato-data">Formato de Data/Hora</label>
+              <select id="formato-data">
+                <option value="dd/mm/yyyy">DD/MM/YYYY HH:mm:ss</option>
+                <option value="mm/dd/yyyy">MM/DD/YYYY HH:mm:ss</option>
+                <option value="yyyy-mm-dd">YYYY-MM-DD HH:mm:ss</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="qualidade">Qualidade de Saída</label>
+              <select id="qualidade">
+                <option value="original">Original</option>
+                <option value="alta">Alta</option>
+                <option value="media" selected>Média</option>
+                <option value="baixa">Baixa</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-toggles">
+            <div class="toggle-item">
+              <div class="toggle-info">
+                <h4>Etiquetas de Alto-falante</h4>
+                <p>Identificar diferentes falantes na transcrição</p>
+              </div>
+              <label class="toggle">
+                <input type="checkbox" id="etiquetas" checked />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-item">
+              <div class="toggle-info">
+                <h4>Carimbos de Palavra</h4>
+                <p>Adicionar timestamps em nível de palavra</p>
+              </div>
+              <label class="toggle">
+                <input type="checkbox" id="carimbos-palavra" />
+                <span class="slider"></span>
+              </label>
+            </div>
+
+            <div class="toggle-item">
+              <div class="toggle-info">
+                <h4>Remover Pausas</h4>
+                <p>Eliminar silêncios longos da transcrição</p>
+              </div>
+              <label class="toggle">
+                <input type="checkbox" id="remover-pausas" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Botões de Ação -->
+        <div class="action-buttons">
+          <button class="btn-secondary" onclick="resetForm()">Cancelar</button>
+          <button class="btn-primary" onclick="exportar()">
+            <span data-page ="./Convet.html">Converter Arquivo</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
       </div>
-    </section>
 
-    <section class="form-section">
-      <h2>Parâmetros para Transcrição</h2>
-      <label for="linguagem">Linguagem</label>
-      <input type="text" id="linguagem" placeholder="Ex: Português, Inglês, Espanhol..." />
-
-      <label for="arquivo">Tipo de arquivo</label>
-      <input type="text" id="arquivo" placeholder="Adicionar arquivo (link, foto, etc...)" />
-
-      <label for="precisao">Precisão</label>
-      <input type="text" id="precisao" placeholder="Nível de precisão desejado" />
-    </section>
-
-    <section class="form-section">
-      <h2>Preferências para formatação</h2>
-      <label for="formato-data">Formato de carimbo de data/hora</label>
-      <input type="text" id="formato-data" placeholder="Ex: DD/MM/AAAA HH:mm:ss" />
-
-      <label for="etiquetas">Etiquetas de alto-falante</label>
-      <input type="text" id="etiquetas" placeholder="Ex: Speaker 1, Speaker 2..." />
-
-      <label for="carimbos-palavra">Carimbos de data e hora em nível de palavra</label>
-      <input type="text" id="carimbos-palavra" placeholder="Ex: Sim / Não" />
-    </section>
-
-    <div class="export-btn-container">
-      <button class="export-btn" onclick="exportar()">Export</button>
+      <!-- Footer -->
+      <div class="depth-frame-20">
+        <div class="depth-frame-21">
+          <div class="depth-frame-22">
+            <div class="depth-frame-23">
+              <div class="depth-frame-24"><div class="text-wrapper-7">Termos de Serviço</div></div>
+              <div class="depth-frame-24"><div class="text-wrapper-7">Política de Privacidade</div></div>
+              <div class="depth-frame-24"><div class="text-wrapper-7">Contate-nos</div></div>
+            </div>
+            <div class="depth-frame-25">
+              <p class="text-wrapper-7">©️ 2023 TranscribeAI. Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </div>
 
-  <script src="./../js/Convert.js"></script>
   <script type="module" src="../controller/mainController.js"></script>
-  <script type="module" src="./../js/Header.js"></script>
-
+  <script type="module" src="./../js/header.js"></script>
+  <script src="./../js/Convert.js"></script>
 </body>
 </html>
