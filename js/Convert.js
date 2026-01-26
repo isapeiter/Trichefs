@@ -190,8 +190,7 @@ function exportar() {
     btn.disabled = false;
     btn.innerHTML = originalText;
     
-    alert(`Arquivo "${selectedFile.name}" convertido com sucesso para ${selectedFormat}!\n\nEm breve você receberá o arquivo convertido.`);
-    
+   
     // Aqui você implementaria a lógica real de conversão
     // Por exemplo, enviando para um backend:
     // uploadAndConvert(selectedFile, config);
